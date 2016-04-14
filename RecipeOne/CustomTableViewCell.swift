@@ -11,8 +11,7 @@ import UIKit
 class CustomTableViewCell: UITableViewCell {
 
     // Properties
-    var Title  : String?,
-        Recipe : String?
+    var recipe : Recipe?
     
     override func awakeFromNib() {
         super.awakeFromNib()

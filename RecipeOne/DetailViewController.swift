@@ -10,14 +10,13 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    var RecipeIdentity : String?
+    var recipe : Recipe!
     
     @IBOutlet weak var recipeTextView: UITextView!
     
-    
     override func viewDidAppear(animated: Bool) {
-        self.title = RecipeIdentity
-        recipeTextView.text = RecipeIdentity
+        self.title = recipe.title
+        recipeTextView.text = recipe.recipe
     }
     
     override func viewDidLoad() {

@@ -10,9 +10,6 @@ import UIKit
 
 class ViewController: UITableViewController {
 
-    
-    let array : [String] = ["Data One", "Data Two", "Data Three"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,15 +19,12 @@ class ViewController: UITableViewController {
         // Setting 70 pixels for the tableView rows height
         tableView.rowHeight = 70
         tableView.backgroundView = image
-        
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
-        
         navigationController?.navigationBar.alpha = 0.7
-        
+        tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,28 +33,29 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return array.count
+        return RecipeManager.recipes.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("customcell")! as! CustomTableViewCell
+        let recipe = RecipeManager.LoadRecipe(indexPath.item)
         
+        cell.recipe = recipe
         cell.textLabel?.textColor = UIColor.whiteColor()
-        cell.textLabel?.text = array[indexPath.item]
+        cell.textLabel?.text = recipe.title
         
         if(indexPath.item % 2 == 0)
         {
             cell.backgroundColor = UIColor.clearColor()
-        }else {
+        }
+        else
+        {
             cell.backgroundColor = UIColor.whiteColor()
             .colorWithAlphaComponent(0.2)
             cell.textLabel?.backgroundColor = UIColor.whiteColor()
                 .colorWithAlphaComponent(0.0)
         }
         
-        cell.Title = array[indexPath.item]
-        cell.Recipe = array[indexPath.item]
-
         return cell
     }
 
@@ -68,7 +63,9 @@ class ViewController: UITableViewController {
         if(segue.identifier == "detailSegue"){
             let cell = sender as! CustomTableViewCell
             let detailview = segue.destinationViewController as! DetailViewController
-            detailview.RecipeIdentity = cell.Title
+            let id = RecipeManager.recipes.indexOf({ $0.title == cell.recipe?.title })
+            let recipe = RecipeManager.LoadRecipe(id!)
+            detailview.recipe = recipe
         }
     }
 }

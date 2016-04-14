@@ -15,6 +15,8 @@
 		7CCA67AD1CBE08BD00ED8C34 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCA67AC1CBE08BD00ED8C34 /* AddViewController.swift */; };
 		7CCA67AF1CBE08D400ED8C34 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCA67AE1CBE08D400ED8C34 /* DetailViewController.swift */; };
 		7CCA67B11CBE1D1C00ED8C34 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCA67B01CBE1D1C00ED8C34 /* CustomTableViewCell.swift */; };
+		7CCA67B31CBEC92A00ED8C34 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCA67B21CBEC92A00ED8C34 /* Recipe.swift */; };
+		7CCA67B61CBECA4600ED8C34 /* RecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCA67B51CBECA4600ED8C34 /* RecipeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		7CCA67AC1CBE08BD00ED8C34 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		7CCA67AE1CBE08D400ED8C34 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7CCA67B01CBE1D1C00ED8C34 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		7CCA67B21CBEC92A00ED8C34 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		7CCA67B51CBECA4600ED8C34 /* RecipeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +71,20 @@
 				7CCA67B01CBE1D1C00ED8C34 /* CustomTableViewCell.swift */,
 				7CCA679E1CBDCFAA00ED8C34 /* Main.storyboard */,
 				7CCA67A31CBDCFAA00ED8C34 /* LaunchScreen.storyboard */,
+				7CCA67B41CBEC93100ED8C34 /* Model */,
 				7CCA67A11CBDCFAA00ED8C34 /* Assets.xcassets */,
 				7CCA67A61CBDCFAA00ED8C34 /* Info.plist */,
 			);
 			path = RecipeOne;
+			sourceTree = "<group>";
+		};
+		7CCA67B41CBEC93100ED8C34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7CCA67B21CBEC92A00ED8C34 /* Recipe.swift */,
+				7CCA67B51CBECA4600ED8C34 /* RecipeManager.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +162,8 @@
 				7CCA679D1CBDCFAA00ED8C34 /* ViewController.swift in Sources */,
 				7CCA67B11CBE1D1C00ED8C34 /* CustomTableViewCell.swift in Sources */,
 				7CCA679B1CBDCFAA00ED8C34 /* AppDelegate.swift in Sources */,
+				7CCA67B31CBEC92A00ED8C34 /* Recipe.swift in Sources */,
+				7CCA67B61CBECA4600ED8C34 /* RecipeManager.swift in Sources */,
 				7CCA67AD1CBE08BD00ED8C34 /* AddViewController.swift in Sources */,
 				7CCA67AF1CBE08D400ED8C34 /* DetailViewController.swift in Sources */,
 			);
